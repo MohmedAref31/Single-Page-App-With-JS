@@ -53,7 +53,7 @@ function render() {
   console.log(route);
   root.innerHTML = routes[route]
     ? `<div class="container">
-        ${paths.length > 1 && "<div class\=\"nav\" id=\"back\"><-</div>"}
+        ${paths.length > 1 ? "<div class\=\"nav\" id=\"back\"><-</div>" : ""}
     ${routes[route]}
     </div>`
     : `<div>
